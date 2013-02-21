@@ -1,21 +1,17 @@
-# Template Puppet Module for Boxen
+# Bitcasa Puppet Module for Boxen
 
-An example of how we write Puppet modules for Boxen. Replace this
-paragraph with a short explanation of what the heck makes your module
-useful.
+Install [Bitcasa](http://www.bitcasa.com/)
 
 ## Usage
 
 ```puppet
-boxen::example { 'best example ever':
-  salutation => 'fam'
-}
+# install Bitcasa
+include bitcasa
 ```
 
 ## Required Puppet Modules
 
 * `boxen`
-* `anything-else`
 
 ## Development
 
