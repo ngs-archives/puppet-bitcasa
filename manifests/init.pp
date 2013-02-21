@@ -1,6 +1,6 @@
 class bitcasa {
   package { 'Bitcasa':
     provider => 'pkgdmg',
-    source   => 'https://www.bitcasa.com/download/mac',
+    source   => 'http://dist.bitcasa.com/Bitcasa_1037.pkg',
   }
 }
