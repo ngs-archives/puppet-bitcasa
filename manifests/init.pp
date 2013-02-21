@@ -8,5 +8,6 @@ class bitcasa {
   package { 'Bitcasa':
     provider => 'apple',
     source   => "${boxen::config::cachedir}/Bitcasa.pkg",
+    ensure   => 'installed',
   }
 }
