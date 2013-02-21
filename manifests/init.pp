@@ -1,6 +1,12 @@
 class bitcasa {
+  require boxen::config
+
+  exec { "curl -kL https://www.bitcasa.com/download/mac -o '${boxen::config::cachedir}/Bitcasa.pkg'":
+    path => [ '/usr/bin' ]
+  }
+
   package { 'Bitcasa':
     provider => 'apple',
-    source   => 'http://dist.bitcasa.com/Bitcasa_1037.pkg'
+    source   => "${boxen::config::cachedir}/Bitcasa.pkg",
   }
 }
