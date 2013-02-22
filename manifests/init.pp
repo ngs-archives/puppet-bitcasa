@@ -1,6 +1,6 @@
 class bitcasa {
   exec { "curl -kL https://www.bitcasa.com/download/mac -o '/Library/Receipts/Bitcasa.pkg'":
-    path   => [ '/usr/bin' ],
+    path   => [ '/usr/bin', '/bin' ],
     onlyif => "sh -c '[ ! -f /Library/Receipts/Bitcasa.pkg ]'",
   }
 
