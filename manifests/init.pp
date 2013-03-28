@@ -7,7 +7,7 @@ class bitcasa {
     onlyif  => "sh -c '[ ! -f /Lubrary/Receipts/Bitcasa_${bitcasa_version}.pkg ]'",
   }
 
-  package { 'Bitcasa':
+  package { "Bitcasa_${bitcasa_version}":
     provider => 'apple',
     source   => "/Library/Receipts/Bitcasa_${bitcasa_version}.pkg",
     require  => Exec['bitcasa-fetch-installer'],
