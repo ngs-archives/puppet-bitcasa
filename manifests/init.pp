@@ -1,19 +1,6 @@
 class bitcasa {
-  $version   = '1.3.1207'
-  $installer = "/Library/Receipts/Bitcasa_${version}.pkg"
-  $dl_link   = 'https://www.bitcasa.com/download/mac'
-
-  exec { 'bitcasa-fetch-installer':
-    command => "curl -kL ${dl_link} -o ${installer}",
-    path    => [ '/usr/bin', '/bin' ],
-    onlyif  => "sh -c '[ ! -f ${installer} ];'",
-  }
-
-  package { "Bitcasa_${version}":
-    ensure      => 'installed',
-    provider    => 'apple',
-    source      => $installer,
-    require     => Exec['bitcasa-fetch-installer'],
+  package { 'Bitcasa':
+    provider => 'pkgdmg',
+    source   => 'https://www.bitcasa.com/download/mac',
   }
 }
-
