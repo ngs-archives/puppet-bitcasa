@@ -6,7 +6,7 @@ class bitcasa {
   exec { 'bitcasa-fetch-installer':
     command => "curl -kL ${dl_link} -o ${installer}",
     path    => [ '/usr/bin', '/bin' ],
-    only_if => "sh -c '[ ! -f ${installer} ];'"
+    onlyif => "sh -c '[ ! -f ${installer} ];'"
   }
 
   package { 'Bitcasa':
