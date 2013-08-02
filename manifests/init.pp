@@ -6,14 +6,14 @@ class bitcasa {
   exec { 'bitcasa-fetch-installer':
     command => "curl -kL ${dl_link} -o ${installer}",
     path    => [ '/usr/bin', '/bin' ],
-    onlyif => "sh -c '[ ! -f ${installer} ];'"
+    onlyif  => "sh -c '[ ! -f ${installer} ];'",
   }
 
-  package { 'Bitcasa':
-    name      => "Bitcasa_${version}",
-    provider  => 'apple',
-    source    => $installer,
-    subscribe => Exec['bitcasa-fetch-installer'],
+  package { "Bitcasa_${version}":
+    ensure      => 'installed',
+    provider    => 'apple',
+    source      => $installer,
+    require     => Exec['bitcasa-fetch-installer'],
   }
 }
 
