@@ -14,5 +14,6 @@ class bitcasa {
     provider  => 'apple',
     source    => $installer,
     subscribe => Exec['bitcasa-fetch-installer'],
+  }
 }
 
