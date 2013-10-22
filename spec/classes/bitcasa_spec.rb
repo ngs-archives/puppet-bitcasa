@@ -4,7 +4,7 @@ describe 'bitcasa' do
   it do
     should contain_package('Bitcasa').with({
       :provider => 'pkgdmg',
-      :source   => 'https://www.bitcasa.com/download/mac',
+      :source   => 'https://d1kbf262vwnlmm.cloudfront.net/Bitcasa_1.3.1249.dmg',
     })
   end
 end

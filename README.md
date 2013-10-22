@@ -1,19 +1,17 @@
-# Bitcasa Puppet Module for Boxen
+Bitcasa Puppet Module for Boxen
+===============================
+
+[![Build Status](https://travis-ci.org/boxelly/puppet-bitcasa.png?branch=master)](https://travis-ci.org/boxelly/puppet-bitcasa)
 
 Install [Bitcasa](http://www.bitcasa.com/)
 
 ## Usage
 
 ```puppet
-# install Bitcasa
 include bitcasa
 ```
 
 ## Required Puppet Modules
 
 * `boxen`
-
-## Development
-
-Write code. Run `script/cibuild` to test it. Check the `script`
-directory for other useful tools.
+* `stdlib`
